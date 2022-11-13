@@ -1,4 +1,5 @@
 ﻿using BasicWebApi.Endpoints;
+using BasicWebApi.Filters;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,16 +19,21 @@ Console.WriteLine($"WebRootPath: {builder.Environment.WebRootPath}");
 
 var app = builder.Build();
 
+// app.UseCors();
+// app.UseAuthentication();
+// app.UseAuthorization();
+
 // Configure the HTTP request pipeline.
 //if (app.Environment.IsDevelopment())
 //{
-    app.UseSwagger();
-    app.UseSwaggerUI();
+app.UseSwagger();
+app.UseSwaggerUI();
 //}
 
 app.UseHttpsRedirection();
 
 var all = app.MapGroup("")
+    .AddEndpointFilter<ExceptionFilter>()
     .WithOpenApi();
 
 all.MapGroup("/info")

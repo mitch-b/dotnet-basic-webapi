@@ -4,15 +4,15 @@ Quickly clone this repository to get a .NET 7 [minimal API](https://learn.micros
 
 1. Has a basic set of endpoints
 1. Produces OpenApi Explorer
-1. Has dependency injection usage examples
-1. Demonstrates deprecated API
+1. Has dependency injection usage examples ([\[FromServices\]](./BasicWebApi/Endpoints/HostInfoEndpoints.cs#L21))
+1. Demonstrates deprecated API ([GetHostInfo2](./BasicWebApi/Endpoints/HostInfoEndpoints.cs#L13))
 1. Docker container support
+1. Has a basic Filter added ([ExceptionFilter](./BasicWebApi/Filters/ExceptionFilter.cs))
 1. devcontainer configured - only need container runtime, not dotnet locally installed (TODO)
 1. Has GitHub actions to build a container (TODO)
 1. Has a Client generator (TODO)
 1. [Versioned API](https://github.com/dotnet/aspnet-api-versioning/blob/3857a332057d970ad11bac0edfdbff8a559a215d/examples/AspNetCore/WebApi/MinimalOpenApiExample/Program.cs) built-in (TODO)
-1. Has a basic Filter added (TODO)
-1. Has optional authentication/authorization with Azure AD (TODO)
+1. Has optional [authentication/authorization](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/minimal-apis/security?view=aspnetcore-7.0) with Azure AD (TODO)
 
 ## Build & Run Docker container
 
