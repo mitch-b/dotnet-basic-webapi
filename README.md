@@ -17,6 +17,7 @@ Quickly clone this repository to get a .NET 7 [minimal API](https://learn.micros
 ## Build & Run Docker container
 
 ```bash
+cd BasicWebApi/
 docker build -t dotnet-basic-webapi:latest .
 docker run --rm -p 5080:80 dotnet-basic-webapi:latest
 open http://localhost:5080/swagger/
